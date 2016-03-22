@@ -1,0 +1,117 @@
+[onecloud@localhost ]$ python destroy_deploy.py 
+
+======================================================================
+    Configuration for this Scale Test
+======================================================================
+ Tenant will be created with prefix                         : tenant-test
+ No of Tenants will be created                              : 1
+ Tenant base index range starts from                        : 101
+ No of Users per Tenant                                     : 1
+ No of Networks                                             : 2
+ No of VMs per Network                                      : 1
+ Name of the External Network with be connected with Router : public
+ Name of the Floating IP Pool will be used for Allocation   : public
+======================================================================
+
+
+Destroying Scale Test Deployment
+
+
+==================================================
+   Terminating VM launched on tenant-test-101-net-1
+==================================================
+
+
+  * Instance terminated on network: tenant-test-101-net-1-vm-1
+
+
+<== Completed VM Termination on Network ==>
+
+
+-----------------------------------------------------------------
+    Instance tenant-test-101-net-1-vm-1 Deletion Time Summary :
+-----------------------------------------------------------------
+
+
+   - Test Started Time   :	 2015-12-02 05:45:08 PST-0800
+   - Test Ended Time     :	 2015-12-02 05:45:09 PST-0800
+
+
+==================================================
+   Terminating VM launched on tenant-test-101-net-2
+==================================================
+
+
+  * Instance terminated on network: tenant-test-101-net-2-vm-1
+
+
+<== Completed VM Termination on Network ==>
+
+
+-----------------------------------------------------------------
+    Instance tenant-test-101-net-2-vm-1 Deletion Time Summary :
+-----------------------------------------------------------------
+
+
+   - Test Started Time   :	 2015-12-02 05:45:09 PST-0800
+   - Test Ended Time     :	 2015-12-02 05:45:11 PST-0800
+
+
+==================================================
+   Initiated Network Deletion 
+==================================================
+
+
+   Deleted tenant-test-101-net-1
+   Deleted tenant-test-101-net-2
+
+
+-----------------------------------------------------------------
+    Network tenant-test-101-net-2 Deletion Time Summary :
+-----------------------------------------------------------------
+
+
+   - Test Started Time   :	 2015-12-02 05:45:16 PST-0800
+   - Test Ended Time     :	 2015-12-02 05:45:18 PST-0800
+   Deleted tenant-test-101-router
+
+
+<== Completed Network, Router Deletion from External Gateway Successfully ==>
+
+
+-----------------------------------------------------------------
+    Router Deletion Time Summary :
+-----------------------------------------------------------------
+
+
+   - Test Started Time   :	 2015-12-02 05:45:18 PST-0800
+   - Test Ended Time     :	 2015-12-02 05:45:19 PST-0800
+
+
+<== Released all Floating IPs Successfully ==>
+   - Deleted User tenant-test-101-user-1
+   - Deleted Tenant tenant-test-101 
+
+
+-----------------------------------------------------------------
+    Tenant & User Deletion Time Summary :
+-----------------------------------------------------------------
+
+
+   - Test Started Time   :	 2015-12-02 05:45:20 PST-0800
+   - Test Ended Time     :	 2015-12-02 05:45:21 PST-0800
+==================================================
+
+
+Cleaned Scale Test Deployment
+
+
+-----------------------------------------------------------------
+    Scale Test Deployment Consolidated Time Summary :
+-----------------------------------------------------------------
+
+
+   - Test Started Time   :	 2015-12-02 05:45:08 PST-0800
+   - Test Ended Time     :	 2015-12-02 05:45:21 PST-0800
+   - Elapsed Time for Cleaned Scale Test Deployment: 0 days, 0 hours, 0 minutes, 13 seconds
+

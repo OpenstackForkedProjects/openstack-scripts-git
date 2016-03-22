@@ -1,0 +1,83 @@
+[onecloud@localhost ]$ python discover_deploy.py 
+
+==================================================
+Discovering Tenant Topology on Scale Test Deployment
+==================================================
+
+
+   - Tenant tenant-test-101 Discovered
+   - Tenant_ID 4b74d5bac8804fa5a9659b0ea3b9ba2d Discovered
+   - Router tenant-test-101-router Discovered
+   - Network tenant-test-101-net-1 Discovered
+   - Network ID 5f46c911-25ed-4cb1-8f83-0db036098b28 Discovered
+   - VLAN ID 1002 Discovered
+   - Instance tenant-test-101-net-1-vm-1 Discovered
+   - Instance ID <Server: tenant-test-101-net-1-vm-1> Discovered
+   - Network tenant-test-101-net-2 Discovered
+   - Network ID 2291b6f3-96d0-4c4c-9e77-20511e24d7d5 Discovered
+   - VLAN ID 1003 Discovered
+   - Instance tenant-test-101-net-2-vm-1 Discovered
+   - Instance ID <Server: tenant-test-101-net-2-vm-1> Discovered
+
+
+   - Tenant tenant-test-102 Discovered
+   - Tenant_ID cdb407074e644ff2a3cf28085790bb60 Discovered
+   - Router tenant-test-102-router Discovered
+   - Network tenant-test-102-net-1 Discovered
+   - Network ID 3cdc279c-07fe-49bd-b157-c37567569a62 Discovered
+   - VLAN ID 1004 Discovered
+   - Instance tenant-test-102-net-1-vm-1 Discovered
+   - Instance ID <Server: tenant-test-102-net-1-vm-1> Discovered
+   - Network tenant-test-102-net-2 Discovered
+   - Network ID f35a5452-e1fa-4330-a54a-778097ccd577 Discovered
+   - VLAN ID 1005 Discovered
+   - Instance tenant-test-102-net-2-vm-1 Discovered
+   - Instance ID <Server: tenant-test-102-net-2-vm-1> Discovered
+
+
+==================================================
+Scale Test Discovery Completed
+==================================================
+********************************************************************************
+Scale Test Deployment OpenStack Report
+********************************************************************************
+
+
+           Tenant Discovery Results      
++-----------------+--------+
+| Tenant Name     | Status |
++-----------------+--------+
+| tenant-test-101 |  True  |
+| tenant-test-102 |  True  |
++-----------------+--------+
+
+
+           Router Discovery Results      
++-----------------+------------------------+--------+
+| Tenant Name     |      Router Name       | Status |
++-----------------+------------------------+--------+
+| tenant-test-101 | tenant-test-101-router |  True  |
+| tenant-test-102 | tenant-test-102-router |  True  |
++-----------------+------------------------+--------+
+
+
+                 Network Discovery Results      
++-----------------+-----------------------+--------------+---------+--------------------------+--------+
+|   Tenant Name   |      Network Name     | Network CIDR | Vlan ID |       Subnet Name        | Status |
++-----------------+-----------------------+--------------+---------+--------------------------+--------+
+| tenant-test-101 | tenant-test-101-net-1 |  1.1.1.0/24  |   1002  | tenant-test-101-subnet-1 |  True  |
+| tenant-test-101 | tenant-test-101-net-2 |  2.2.2.0/24  |   1003  | tenant-test-101-subnet-2 |  True  |
+| tenant-test-102 | tenant-test-102-net-1 |  1.1.1.0/24  |   1004  | tenant-test-102-subnet-1 |  True  |
+| tenant-test-102 | tenant-test-102-net-2 |  2.2.2.0/24  |   1005  | tenant-test-102-subnet-2 |  True  |
++-----------------+-----------------------+--------------+---------+--------------------------+--------+
+
+
+            Instance Discovery Results      
++-----------------+----------------------------+--------+
+| Tenant Name     |       Instance Name        | Status |
++-----------------+----------------------------+--------+
+| tenant-test-101 | tenant-test-101-net-1-vm-1 |  True  |
+| tenant-test-101 | tenant-test-101-net-2-vm-1 |  True  |
+| tenant-test-102 | tenant-test-102-net-1-vm-1 |  True  |
+| tenant-test-102 | tenant-test-102-net-2-vm-1 |  True  |
++-----------------+----------------------------+--------+

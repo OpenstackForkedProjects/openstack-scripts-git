@@ -1,0 +1,193 @@
+[onecloud@localhost ]$ python initialize_deploy.py 
+
+======================================================================
+    Configuration for this Scale Test
+======================================================================
+ Tenant will be created with prefix                         : tenant-test
+ No of Tenants will be created                              : 1
+ Tenant base index range starts from                        : 101
+ No of Users per Tenant                                     : 1
+ No of Networks                                             : 2
+ No of VMs per Network                                      : 1
+ Name of the External Network with be connected with Router : public
+ Name of the Floating IP Pool will be used for Allocation   : public
+======================================================================
+
+
+Starting Scale Test Deployment
+
+
+==================================================
+   Initiated Tenant Creation for tenant-test-101
+==================================================
+
+
+   - Tenant tenant-test-101 created
+   - Created User tenant-test-101-user-1
+
+
+<== Completed Tenant Creation and Users per Tenant with _member_ role Successfully ==>
+
+
+-----------------------------------------------------------------
+    Tenant & User Creation Time Summary :
+-----------------------------------------------------------------
+
+
+   - Test Started Time   :	 2015-12-02 05:39:25 PST-0800
+   - Test Ended Time     :	 2015-12-02 05:39:25 PST-0800
+
+
+   - Created Router tenant-test-101-router
+
+
+-----------------------------------------------------------------
+    Router tenant-test-101-router Creation Time Summary :
+-----------------------------------------------------------------
+
+
+   - Test Started Time   :	 2015-12-02 05:39:26 PST-0800
+   - Test Ended Time     :	 2015-12-02 05:39:26 PST-0800
+
+
+==================================================
+   Initiated Network Creation for tenant-test-101-net-1
+==================================================
+
+
+   - Network tenant-test-101-net-1 created
+   - Created subnet tenant-test-101-subnet-1
+   - Created interface between tenant-test-101-subnet-1
+
+
+<== Completed Network Creation with External Gateway Successfully ==>
+
+
+-----------------------------------------------------------------
+    Network tenant-test-101-net-1 Creation Time Summary :
+-----------------------------------------------------------------
+
+
+   - Test Started Time   :	 2015-12-02 05:39:26 PST-0800
+   - Test Ended Time     :	 2015-12-02 05:39:27 PST-0800
+
+
+==================================================
+   Initiated VM Deployment tenant-test-101-net-1
+==================================================
+
+
+  * Instance created on network: tenant-test-101-net-1-vm-1
+   - Current status: ACTIVE
+   - Assigned Floating IP: 13.13.3.156
+
+
+<== Completed VM Launch on Network with Floating IP Allocation Successfully ==>
+
+
+-----------------------------------------------------------------
+    Instance tenant-test-101-net-1-vm-1 Creation Time Summary :
+-----------------------------------------------------------------
+
+
+   - Test Started Time   :	 2015-12-02 05:39:27 PST-0800
+   - Test Ended Time     :	 2015-12-02 05:39:56 PST-0800
+
+
+==================================================
+   Initiated Network Creation for tenant-test-101-net-2
+==================================================
+
+
+   - Network tenant-test-101-net-2 created
+   - Created subnet tenant-test-101-subnet-2
+   - Created interface between tenant-test-101-subnet-2
+
+
+<== Completed Network Creation with External Gateway Successfully ==>
+
+
+-----------------------------------------------------------------
+    Network tenant-test-101-net-2 Creation Time Summary :
+-----------------------------------------------------------------
+
+
+   - Test Started Time   :	 2015-12-02 05:39:56 PST-0800
+   - Test Ended Time     :	 2015-12-02 05:39:57 PST-0800
+
+
+==================================================
+   Initiated VM Deployment tenant-test-101-net-2
+==================================================
+
+
+  * Instance created on network: tenant-test-101-net-2-vm-1
+   - Current status: ACTIVE
+   - Assigned Floating IP: 13.13.3.157
+
+
+<== Completed VM Launch on Network with Floating IP Allocation Successfully ==>
+
+
+-----------------------------------------------------------------
+    Instance tenant-test-101-net-2-vm-1 Creation Time Summary :
+-----------------------------------------------------------------
+
+
+   - Test Started Time   :	 2015-12-02 05:39:57 PST-0800
+   - Test Ended Time     :	 2015-12-02 05:40:26 PST-0800
+==================================================
+
+
+Scale Test Deployment Completed
+
+
+********************************************************************************
+Scale Test Deployment OpenStack Report
+********************************************************************************
+
+
+           Tenant Creation Results      
++-----------------+--------+
+| Tenant Name     | Status |
++-----------------+--------+
+| tenant-test-101 |  True  |
++-----------------+--------+
+
+
+           Router Creation Results      
++-----------------+------------------------+--------+
+| Tenant Name     |      Router Name       | Status |
++-----------------+------------------------+--------+
+| tenant-test-101 | tenant-test-101-router |  True  |
++-----------------+------------------------+--------+
+
+
+                 Network Creation Results      
++-----------------+-----------------------+--------------+---------+--------------------------+--------+
+|   Tenant Name   |      Network Name     | Network CIDR | Vlan ID |       Subnet Name        | Status |
++-----------------+-----------------------+--------------+---------+--------------------------+--------+
+| tenant-test-101 | tenant-test-101-net-1 |  1.1.1.0/22  |   1002  | tenant-test-101-subnet-1 |  True  |
+| tenant-test-101 | tenant-test-101-net-2 |  2.2.2.0/22  |   1003  | tenant-test-101-subnet-2 |  True  |
++-----------------+-----------------------+--------------+---------+--------------------------+--------+
+
+
+            Instance Creation Results      
++-----------------+----------------------------+--------+
+| Tenant Name     |       Instance Name        | Status |
++-----------------+----------------------------+--------+
+| tenant-test-101 | tenant-test-101-net-1-vm-1 | ACTIVE |
+| tenant-test-101 | tenant-test-101-net-2-vm-1 | ACTIVE |
++-----------------+----------------------------+--------+
+
+
+-----------------------------------------------------------------
+    Scale Test Deployment Consolidated Time Summary :
+-----------------------------------------------------------------
+
+
+   - Test Started Time:	 2015-12-02 05:39:25 PST-0800
+   - Test Ended Time:	 2015-12-02 05:40:26 PST-0800
+   - Elapsed Time for Scale Test Deployment: 0 days, 0 hours, 1 minutes, 61 seconds
+
+
